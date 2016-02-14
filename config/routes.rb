@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'welcome/contact_us'
   get 'welcome/sample_page'
 
+  resources :users, only: [:show, :main_page]
+
   root 'users#main_page'
 
 
