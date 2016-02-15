@@ -26,6 +26,36 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :profession %><br />
+    <%= f.text_field :profession %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :work_hours %><br />
+    <%= f.text_field :work_hours %>
+  </div>
+
+  <div class="field">
+    <%= f.label :biography %><br />
+    <%= f.text_field :biography %>
+  </div>
+
+  <div class="field">
+    <%= f.label :work_area %><br />
+    <%= f.text_field :work_area %>
+  </div>
+
+  <div class="field">
+    <%= f.label :school %><br />
+    <%= f.text_field :school %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
