@@ -3,10 +3,17 @@
   <h1>Profile</h1>
 </div>
 <br>
-<%= current_user.name %>
-
-<%= current_user.biography %>
+<p><%= current_user.name %></p>
 <br>
-<%= current_user.profession %>
+<u>Biography</u>
+<br>
+<p><%= current_user.biography %></p>
+<br>
+<p><%= current_user.profession %></p>
+<br>
+<u>Goals</u>
+  <ul>
+    <li><p><%= render current_user.goals %></p></li>
+  </ul>
 
-
+<%= render "goals/form" %>

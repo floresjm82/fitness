@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'welcome/sample_page'
 
   resources :users, only: [:show, :main_page]
-
+  resources :goals, only: [:create, :destroy]
   root 'users#main_page'
 
 
