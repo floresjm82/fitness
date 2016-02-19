@@ -47,6 +47,7 @@ gem 'devise', '~> 3.5.2'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'rails_12factor', group: :production
 
 
 
