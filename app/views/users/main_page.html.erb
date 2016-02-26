@@ -1,16 +1,13 @@
 
 <br>
-<div class="text-center">
-  <h1>Graduate Body Fitness</h1>
-</div>
-
+<h1 class="text-center">Graduate Body Fitness</h1>
 <div class="container">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<br>
 			<br>
 			<br>
-			Pic
+			<p>Pic</p>
 			<br>
 			<br>
 			<br>
@@ -21,29 +18,31 @@
 				<li>School - <%=current_user.school %></li>
 			</ul>
 
-			<p><u>About me</u></p>
-			<p>Box with description</p>
+			<h4>About me</h4>
+			<p><%= current_user.biography %></p>
       <br>
       <br>
-			<p><u>Friends</u></p>
+			<h4>Friends</h4>
 			<p>Friends</p>
 
     </div>
 
-    <div class="col-md-4">
-    	<p>Search</p>
-    	<p>Daily Report</p>
+    <div class="col-md-5">
+    	<div class="text-center">
+	    	<p>Search</p>
+	    	<h4>Daily Report</h4>
+	    </div>
     </div>
 
     <div class="col-md-4">
-    	<p><u>Goals</u></p>
+    	<h4>Goals</h4>
     	<p><%= render current_user.goals %><p>
 			<br>
 			<br>
-			<p>Monthly Featured</p>
+			<h4>Monthly Featured</h4>
 			<br>
 			<br>
-			<p><u>Links</u></p>
+			<h4>Links</h4>
 				<%= link_to "Facebook", "https://www.facebook.com/" %>
 		</div>
 	

@@ -1,19 +1,27 @@
 <br>
-<div class="text-center">
-  <h1>Profile</h1>
+<h1 class="text-center">Profile</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+				<br>
+				<p><%= current_user.name %></p>
+				<br>
+				<h4>Biography</h4>
+				<p><%= current_user.biography %></p>
+				<br>
+				<br>
+				<h4>Goals</h4>
+				  <% if current_user.goals.count >= 1 %>
+					  <ul>
+					    <li><p><%= render current_user.goals %></p></li>
+					  </ul>
+				  <% else %>
+					  <p>Let's get started! Make some goals!</p>
+					  <br>
+				  <% end %>
+        <%= render "goals/form" %>
+    </div>
+  </div>
 </div>
-<br>
-<p><%= current_user.name %></p>
-<br>
-<u>Biography</u>
-<br>
-<p><%= current_user.biography %></p>
-<br>
-<p><%= current_user.profession %></p>
-<br>
-<u>Goals</u>
-  <ul>
-    <li><p><%= render current_user.goals %></p></li>
-  </ul>
+		
 
-<%= render "goals/form" %>
