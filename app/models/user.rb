@@ -1,7 +1,13 @@
 class User < ActiveRecord::Base
 	has_many :goals
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  before_save do  
+  	self.email = email.downcase
+  end
+
 end
