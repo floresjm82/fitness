@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
 	has_many :goals
 
+	mount_uploader :avatar, AvatarUploader
+
   before_save do  
   	self.email = email.downcase
   end

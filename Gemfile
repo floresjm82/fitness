@@ -50,12 +50,20 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
 end
 
 gem 'devise', '~> 3.5.2'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'carrierwave', '~> 0.10.0'
+
+gem 'fog', '1.37.0' 
+
+gem 'mini_magick'
+
+gem 'figaro', '1.0.0'
 
 
 
