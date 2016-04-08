@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
 	has_many :goals
+  has_many :friends
+  has_many :users, through: :friends
 
 	mount_uploader :avatar, AvatarUploader
 
@@ -13,6 +15,12 @@ class User < ActiveRecord::Base
   def defaults
   	self.role ||= :standard #self.role = :standard if self.role.nil?
   end
+
+  def friends
+    Friend.where(user_id: id)
+  end
+
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
