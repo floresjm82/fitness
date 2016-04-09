@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :main_page]
   resources :goals, only: [:create, :destroy]
+  resources :friends, only: [:create, :destroy, :index]
+  resources :posts, only: [:create, :destroy, :index]
   root 'users#main_page'
 
 

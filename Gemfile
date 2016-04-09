@@ -65,6 +65,8 @@ gem 'mini_magick'
 
 gem 'figaro', '1.0.0'
 
+gem 'pundit', '1.1.0'
+
 
 
 

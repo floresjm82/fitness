@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	has_many :goals
   has_many :friends
+  has_many :posts
   has_many :users, through: :friends
 
 	mount_uploader :avatar, AvatarUploader
