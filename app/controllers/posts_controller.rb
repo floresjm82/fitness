@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
 
-    @posts = Post.all   #need to create scope for feed and for current user.
+    @posts = policy_scope(Post) #pundit
 
   end
 
