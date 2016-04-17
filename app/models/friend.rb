@@ -7,5 +7,9 @@ class Friend < ActiveRecord::Base
 		User.where(id: pluck(:user_id))
 	end
 
+  def user
+    User.find(user_id)
+  end
+
 
 end
