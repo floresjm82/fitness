@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get 'welcome/contact_us'
   get 'welcome/sample_page'
 
+#should nest the appropriate resources when done.
+
   resources :users, only: [:show, :main_page]
   resources :goals, only: [:create, :destroy]
-  resources :friends, only: [:create, :destroy, :index]
+  resources :friends, only: [:create, :destroy, :index, :show]
   resources :posts, only: [:create, :destroy, :index]
   root 'users#main_page'
 

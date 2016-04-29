@@ -6,7 +6,7 @@ class FriendsController < ApplicationController
 
   def create
 
-    @friends = current_user.friend.new(user_id: params[:user_id])
+    @friends = current_user.friend.new(friend_id: params[:user_id])
 
     if @friends.save
       flash [:notice] = "You added a friend"

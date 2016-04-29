@@ -11,12 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408172201) do
+ActiveRecord::Schema.define(version: 20160422133833) do
 
   create_table "friends", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "friend_id"
   end
+
+  add_index "friends", ["friend_id"], name: "index_friends_on_friend_id"
+  add_index "friends", ["user_id"], name: "index_friends_on_user_id"
 
   create_table "goals", force: :cascade do |t|
     t.string   "description"
@@ -32,7 +37,10 @@ ActiveRecord::Schema.define(version: 20160408172201) do
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

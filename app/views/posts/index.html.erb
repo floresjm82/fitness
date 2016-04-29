@@ -1,0 +1,13 @@
+
+<div class="media">
+    <%= @posts.each do |post| %>
+      <div class="media-body">
+      <%= post.body %>
+        <small>
+          Posted by <%= post.user.name %> 
+        </small>
+      </div>
+</div>
+
+
+

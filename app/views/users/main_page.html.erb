@@ -31,6 +31,10 @@
     	<div class="text-center">
 	    	<p>Search</p>
 	    	<h4>Daily Report</h4>
+        <%= render "posts/form" %>
+        <%#= render @posts %>
+        <%#= render @friends.posts %>
+        <%# labeled posts %>
 	    </div>
     </div>
 
@@ -39,7 +43,7 @@
     	<p><%= render current_user.goals %><p>
 			<br>
 			<br>
-			<h4>Monthly Featured</h4>
+			<h4>Most Helpful</h4>
 			<br>
 			<br>
 			<h4>Links</h4>

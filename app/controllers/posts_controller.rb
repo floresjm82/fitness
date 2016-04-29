@@ -2,19 +2,21 @@ class PostsController < ApplicationController
 
   def index
 
-    @posts = policy_scope(Post) #pundit
+    @posts = Post.all #policy_scope(Post) #pundit
 
   end
 
   def create
 
-    @post = current_user.Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     if @post.save
       flash[:notice] = "Post has been created"
     else
       flash[:error] = "There was an error creating the post"
     end
+
+    redirect_to root_path
 
   end
 
